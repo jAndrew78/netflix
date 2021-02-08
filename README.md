@@ -8,7 +8,7 @@ React Application with Firebase Authentication. See technical info below.
 - React
     - Hooks
     - Context
-- Functional Components
+- Styled Components
 - Firebase
 
 
