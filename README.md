@@ -12,12 +12,6 @@ React Application with Firebase Authentication. See technical info below.
 - Firebase
 
 
-### Project Repo & Github
-
-Project Repo: [github.com/jAndrew78/netlix](https://github.com/jAndrew78/netlix)
-Check out my other projects at [github.com/jAndrew78](https://github.com/jAndrew78)
-
-
 ### Preview
 
 ![Preview](netflix-preview.png?raw=true)
