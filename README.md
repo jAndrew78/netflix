@@ -1,4 +1,35 @@
-# Getting Started with Create React App
+## Netflix Clone
+
+React Application with Firebase Authentication. See technical info below.
+
+
+### Technical
+
+- React
+    - Hooks
+    - Context
+- Functional Components
+- Firebase
+
+
+### Project Repo & Github
+
+Project Repo: [github.com/jAndrew78/netlix](https://github.com/jAndrew78/netlix)
+Check out my other projects at [github.com/jAndrew78](https://github.com/jAndrew78)
+
+
+### Preview
+
+![Preview](netflix-preview.png?raw=true)
+
+
+### Credit
+
+Credit to Karl Hadwen for the original project. Check out his youtube channel at [bit.ly/CognitiveSurge](https://bit.ly/CognitiveSurge)
+
+
+----------------------------------------
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -9,7 +40,7 @@ In the project directory, you can run:
 ### `yarn start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+[http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
@@ -24,7 +55,7 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
+The build is minified and the filenames includes the hashes.\
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
