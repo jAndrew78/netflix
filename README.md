@@ -1,6 +1,6 @@
 ## Netflix Clone
 
-React Application with Firebase Authentication. See technical info below.
+Frontend React Application with Styled Components and Firebase Authentication. See technical info below.
 
 
 ### Technical
@@ -8,8 +8,11 @@ React Application with Firebase Authentication. See technical info below.
 - React
     - Hooks
     - Context
-- Styled Components
-- Firebase
+    - Portals
+    - Testing Library
+- Compound & Styled Components
+- Firebase / Firestore
+- Fuse.js
 
 
 ### Preview
