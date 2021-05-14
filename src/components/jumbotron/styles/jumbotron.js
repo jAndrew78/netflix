@@ -1,5 +1,13 @@
 import styled from 'styled-components/macro';       // adding macro gives us name of component in browser dev tools 
 
+export const Item = styled.div`
+    display: flex;
+    border-bottom: 4px solid #222;
+    padding: 50px 5%;
+    color: white;
+    overflow: hidden;
+`;
+
 export const Inner = styled.div`
     display: flex;
     align-items: center;

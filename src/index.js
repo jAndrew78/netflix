@@ -1,5 +1,15 @@
 import React from 'react';
 import { render } from 'react-dom';
-import App from './App';
+import 'normalize.css';                 // took away default empty border on browser page
 
-render(<App />, document.getElementById('root'));
+import App from './App';
+import { GlobalStyles } from './global-styles';
+
+
+render(
+    <>
+        <GlobalStyles />    
+        <App />
+    </>, 
+    document.getElementById('root')
+);
