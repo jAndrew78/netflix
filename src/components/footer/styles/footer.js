@@ -13,8 +13,8 @@ export const Container = styled.div`
 `;
 
 export const Row = styled.div`
-    display: flex;
-    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(205px, 1fr));  // or try 210
     grid-gap: 15px;
 
     @media (max-width: 1000px) {
@@ -47,7 +47,7 @@ export const Text = styled.p`
     margin-bottom: 40px;
 `;
 
-export const Break = styled.div`
+export const Break = styled.p`
     flex-basis: 100%;
     height: 0;
 `;
