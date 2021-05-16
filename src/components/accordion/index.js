@@ -5,9 +5,11 @@ const ToggleContext = createContext();
 
 
 export default function Accordion({ children, ...restProps }) {
-    <Container {...restProps}>
-        <Inner>{children}</Inner>
-    </Container>
+    return (
+        <Container {...restProps}>
+            <Inner>{ children }</Inner>
+        </Container>
+    );
 }
 
 Accordion.Title = function AccordionTitle({ children, ...restProps }) {
@@ -19,7 +21,7 @@ Accordion.Frame = function AccordionFrame({ children, ...restProps }) {
 }
 
 Accordion.Item = function AccordionItem({ children, ...restProps }) {
-    const [toggleShow, settoggleShow] = useState(false)
+    const [toggleShow, setToggleShow] = useState(false)
 
     return (
         <ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
@@ -33,7 +35,8 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 
     return (
         <Header 
-            onClick={() => setToggleShow((toggleShow) => !toggleShow)} 
+            // onClick={() => setToggleShow((toggleShow) => !toggleShow)}   // use this one if state gets tripped up
+            onClick={() => setToggleShow(!toggleShow)}                      // removes error since it's no longer encapsulated
             {...restProps}
         >
             { children }
