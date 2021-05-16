@@ -8,7 +8,7 @@ export const Frame = styled.div`
     
 `;
 
-export const Title = styled.div`
+export const Title = styled.h1`
     
 `;
 
@@ -27,4 +27,3 @@ export const Header = styled.div`
 export const Inner = styled.div`
     
 `;
-
