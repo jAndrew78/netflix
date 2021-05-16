@@ -31,8 +31,8 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
 
     return (
         <Header 
-            // onClick={() => setToggleShow((toggleShow) => !toggleShow)}   // use this one if state gets tripped up
-            onClick={() => setToggleShow(!toggleShow)}                      // removes error since it's no longer encapsulated
+            onClick={() => setToggleShow((toggleShow) => !toggleShow)}   // use this one if state gets tripped up
+            // onClick={() => setToggleShow(!toggleShow)}                // removes error due to encapsulation, though the error isn't there anymore so I guess we're good
             {...restProps}
         >
             { children }
