@@ -25,7 +25,7 @@ Accordion.Item = function AccordionItem({ children, ...restProps }) {
 
     return (
         <ToggleContext.Provider value={{ toggleShow, setToggleShow }}>
-            <Item {...restProps}>{ children }</Item>;
+            <Item {...restProps}>{ children }</Item>
         </ToggleContext.Provider>
     );
 }
@@ -40,6 +40,11 @@ Accordion.Header = function AccordionHeader({ children, ...restProps }) {
             {...restProps}
         >
             { children }
+            { toggleShow ? (
+                <img src="/images/icons/close-slim.png" alt="Close" />
+            ) : (
+                <img src="/images/icons/add.png" alt="Open" />
+            )}
         </Header>
     );
 }
