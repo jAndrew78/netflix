@@ -1,7 +1,8 @@
 import React, { useState, useContext, createContext } from 'react';
-
+import { Container, Frame, Title, Item, Inner, Header, Body } from './syles/accordion';
 
 const ToggleContext = createContext();
+
 
 export default function Accordion({ children, ...restProps }) {
     <Container {...restProps}>
@@ -45,5 +46,3 @@ Accordion.Body = function AccordionBody({ children, ...restProps }) {
 
     return toggleShow ? <Body {...restProps}>{ children }</Body> : null;
 }    
-
-
