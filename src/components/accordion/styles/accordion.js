@@ -5,10 +5,6 @@ export const Container = styled.div`
     border-bottom: 4px solid #222;
 `;
 
-export const Frame = styled.div`
-    margin-bottom: 40px;
-`;
-
 export const Title = styled.h1`
     font-size: 50px;
     line-height: 1.1;

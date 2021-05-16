@@ -38,13 +38,14 @@ export const Link = styled.a`
 export const Title = styled.p`
     font-size: 16px;
     color: #757575;
-    margin-bottom: 40px;
+    margin-bottom: 15px;
 `;
 
 export const Text = styled.p`
     font-size: 13px;
     color: #757575;
-    margin-bottom: 40px;
+    margin-top: 0;
+    margin-bottom: 20px;
 `;
 
 export const Break = styled.p`
