@@ -5,12 +5,10 @@ import FaqsContainer from '../containers/faqs';
 import FooterContainer from '../containers/footer';
 
 
-export default function Home() {
+export default function Browse() {
     return (
         <>
-            <JumbotronContainer />
-            <FaqsContainer />
-            <FooterContainer />        
+            <p>Browse</p>     
         </>
     )
 }
