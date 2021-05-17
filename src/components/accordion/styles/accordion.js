@@ -13,8 +13,9 @@ export const Title = styled.h1`
     color: white;
     text-align: center;
 
-    @media (max-width: 600px) {
+    @media (max-width: 783px) {
         font-size: 35px;
+        margin-bottom: 0;
     }
 `;
 
