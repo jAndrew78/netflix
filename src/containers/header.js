@@ -1,14 +1,18 @@
 import React from 'react';
+
 import { Header } from '../components';
+import * as ROUTES from '../constants/routes';
+import Logo from '../logo.png';
 
 
-export default function HeaderContainer() {
+export default function HeaderContainer({ children }) {
     return (
         <Header>
             <Header.Frame>
-                <Header.Logo />
-                <Header.Button />
+                <Header.Logo to={ROUTES.HOME} src={Logo} alt="Netflix" />
+                <Header.ButtonLink to={ROUTES.SIGN_IN} alt="Sign In">Sign In</Header.ButtonLink>
             </Header.Frame>
+            {children}
         </Header>
     );
 }
