@@ -27,8 +27,6 @@ export const Background = styled.div`
         top left / cover no-repeat;
 `;
 
-export const Frame = styled.div``;
-
 export const Logo = styled.img`
     height: 32px;
     width: 108px;
