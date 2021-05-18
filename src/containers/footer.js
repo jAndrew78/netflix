@@ -1,6 +1,4 @@
 import React from 'react';
-
-// import footerData from '../fixtures/footer';
 import { Footer } from '../components';
 
 
