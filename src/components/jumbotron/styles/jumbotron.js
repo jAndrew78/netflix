@@ -2,7 +2,7 @@ import styled from 'styled-components/macro';       // adding macro gives us nam
 
 export const Item = styled.div`
     display: flex;
-    border-bottom: 4px solid #222;
+    border-bottom: 8px solid #222;
     padding: 50px 5%;
     color: white;
     overflow: hidden;
