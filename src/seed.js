@@ -15,11 +15,11 @@ export function seedDatabase(firebase) {
     // Documentaries
     firebase.firestore().collection('series').add({
       id: getUUID(),
-      title: 'Tiger King',
-      description: 'An exploration of big cat breeding and its bizarre underworld, populated by eccentric characters.',
+      title: 'The Universe',
+      description: 'Discover the secrets of the universe in this series that pairs animation with insights on distant planets, black holes and other celestial marvels.',
       genre: 'documentaries',
-      maturity: '18',
-      slug: 'tiger-king',
+      maturity: '12',
+      slug: 'the-universe',
     });
     firebase.firestore().collection('series').add({
       id: getUUID(),
