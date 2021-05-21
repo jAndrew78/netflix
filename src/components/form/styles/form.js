@@ -5,14 +5,14 @@ import { Link as ReactRouterLink } from 'react-router-dom';
 export const Container= styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 660px;
+    min-height: 475px;
     background-color: rgba(0, 0, 0, .75);
     border-radius: 5px;
     box-sizing: border-box;
     width: 100%;
     margin: auto;
     max-width: 450px;
-    padding: 60px 68px 40px;
+    padding: 20px 68px 40px;
     margin-bottom: 100px;
 `;
 
@@ -43,6 +43,7 @@ export const Text = styled.p`
     color: #737373;
     font-size: 16px;
     font-weight: 500;
+    margin-top: 20px;
 `;
 
 export const TextSmall = styled.p`
@@ -62,14 +63,14 @@ export const Link = styled(ReactRouterLink)`
 `;
 
 export const Input = styled.input`
-    background: #333;
+    background: #fff;
     border-radius: 4px;
     border: 0;
-    color: #fff;
-    height: 50px;
-    line-height: 50px;
+    color: #333;
+    height: 40px;
+    line-height: 40px;
     padding: 5px 20px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 
     &:last-of-type {
         margin-bottom: 30px;
@@ -81,7 +82,7 @@ export const Submit = styled.button`
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
-    margin: 24px 0 12px;
+    margin: 12px 0 12px;
     padding: 16px;
     border: 0;
     color: #fff;
