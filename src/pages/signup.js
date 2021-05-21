@@ -29,14 +29,19 @@ export default function Signup() {
         <>
             <HeaderContainer>
                 <Form>
-                    <Form.Title>Sign In</Form.Title>
+                    <Form.Title>Sign Up</Form.Title>
                     {error && <Form.Error>{error}</Form.Error>}
 
                     <Form.Base onSubmit={handleSignUp} method="POST">
                         <Form.Input 
+                            placeholder="First Name"
+                            value={firstName}
+                            onChange={({ target }) => setFirstName(target.value)}    // destructuring target allowss us to not have to use e.target.etc
+                        />
+                        <Form.Input 
                             placeholder="Email address"
                             value={emailAddress}
-                            onChange={({ target }) => setEmailAddress(target.value)}    // destructuring target allowss us to not have to use e.target.etc
+                            onChange={({ target }) => setEmailAddress(target.value)}
                         />
                         <Form.Input 
                             type="password"
@@ -49,7 +54,7 @@ export default function Signup() {
                     </Form.Base>
 
                     <Form.Text>
-                        New to Netflix? <Form.Link to="/signup">Sign Up Now</Form.Link>
+                        Already a User? <Form.Link to="/signin">Sign In Now</Form.Link>
                     </Form.Text>
                     
                     <Form.TextSmall>
