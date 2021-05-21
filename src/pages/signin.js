@@ -1,14 +1,17 @@
 import React from 'react';
 
-import JumbotronContainer from '../containers/jumbotron';
-import FaqsContainer from '../containers/faqs';
+import HeaderContainer from '../containers/header';
 import FooterContainer from '../containers/footer';
 
 
 export default function Signin() {
     return (
         <>
-            <p>Signin</p>     
+            <HeaderContainer>
+                Sign In Page
+            </HeaderContainer>
+
+            <FooterContainer />
         </>
     )
 }
