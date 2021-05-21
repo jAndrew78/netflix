@@ -2,10 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import * as ROUTES from './constants/routes';
-import { Home, Browse, Signin, Signup } from './pages'
+import { Home, Browse, Signin, Signup } from './pages';
+import { IsUserRedirect } from './helpers/routes';
 
 
 export default function App() {
+    const user = {};
+
     return (
         <Router>
 
@@ -17,13 +20,25 @@ export default function App() {
                 <Browse />
             </Route>
 
-            <Route exact path={ROUTES.SIGN_IN}>
+            {/* SIGN IN */}
+            <IsUserRedirect 
+                user={user} 
+                loggedInPath={ROUTES.BROWSE} 
+                path={ROUTES.SIGN_IN}
+                exact
+            >
                 <Signin />
-            </Route>
+            </IsUserRedirect>
 
-            <Route exact path={ROUTES.SIGN_UP}>
+            {/* SIGN UP */}
+            <IsUserRedirect 
+                user={user} 
+                loggedInPath={ROUTES.BROWSE} 
+                path={ROUTES.SIGN_UP}
+                exact
+            >
                 <Signup />
-            </Route>
+            </IsUserRedirect>
         
         </Router>    
     );
