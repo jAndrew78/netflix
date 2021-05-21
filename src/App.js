@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import * as ROUTES from './constants/routes';
 import { Home, Browse, Signin, Signup } from './pages';
-import { IsUserRedirect } from './helpers/routes';
+import { IsUserRedirect, ProtectedRoute } from './helpers/routes';
 
 
 export default function App() {
@@ -12,13 +12,24 @@ export default function App() {
     return (
         <Router>
 
-            <Route exact path={ROUTES.HOME}>
+            {/* HOME */}
+            <IsUserRedirect 
+                user={user} 
+                loggedInPath={ROUTES.BROWSE} 
+                path={ROUTES.HOME}
+                exact
+            >
                 <Home />
-            </Route>
+            </IsUserRedirect>
 
-            <Route exact path={ROUTES.BROWSE}>
+            {/* BROWSE */}
+            <ProtectedRoute
+                user={user}
+                path={ROUTES.BROWSE}
+                exact                       // can we remove exact from everything but HOME now
+            >
                 <Browse />
-            </Route>
+            </ProtectedRoute>
 
             {/* SIGN IN */}
             <IsUserRedirect 
