@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Header } from '../components';
-import { Profiles } from '../components';
+import { Header, Profiles } from '../components';
 import * as ROUTES from '../constants/routes';
 import Logo from '../logo.png';
 
