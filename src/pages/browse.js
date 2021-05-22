@@ -1,5 +1,7 @@
 import React from 'react';
+
 import { useContent } from '../hooks';
+import selectionFilter from '../utils/selection-filter';
 
 
 export default function Browse() {
@@ -8,10 +10,10 @@ export default function Browse() {
     const { films } = useContent('films');
     
     // need slides
-    
+    const slides = selectionFilter({ series, films });
 
     // pass it to the browse container
-
+    
 
     return (
         <>
