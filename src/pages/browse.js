@@ -6,6 +6,11 @@ import FooterContainer from '../containers/footer';
 
 
 export default function Browse() {
+    // need shows and movies
+    // need slides
+    // pass it to the browse container
+
+
     return (
         <>
             <p>Browse</p>     
