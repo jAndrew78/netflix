@@ -21,7 +21,7 @@ export default function useAuthListener() {
 
         // clear listener to avoid unMounted errors, etc
         return () => listener();
-    }, []);
+    }, [firebase]);
 
     return { user };
 }
