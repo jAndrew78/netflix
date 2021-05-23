@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useState, useContext, createContext } from 'react';
 import { Container, Group, Title, SubTitle, Text, } from './styles/card';
 
 
+export const FeatureContext = createContext();
+
 export default function Card({ children, ...restProps }) {
-    return <Container {...restProps}>{children}</Container>;
+    const [showFeature, setShowFeature] = useState(false);
+    const [itemFeature, setItemFeature] = useState({});
+
+    return (
+        <FeatureContext.Provider
+            value={{ showFeature, setShowFeature, itemFeature, setItemFeature }}
+        >
+            <Container {...restProps}>{children}</Container>
+        </FeatureContext.Provider>
+    )
 }
 
 Card.Group = function CardGroup({ children, ...restProps }) {
@@ -20,4 +31,12 @@ Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
 
 Card.Text = function CardText({ children, ...restProps }) {
     return <Text {...restProps}>{children}</Text>
+}
+
+Card.Meta = function CardMeta({ children, ...restProps }) {
+    return <Meta {...restProps}>{children}</Meta>
+}
+
+Card.Item = function CardItem({ children, ...restProps }) {
+    return <Item {...restProps}>{children}</Item>
 }

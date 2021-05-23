@@ -19,3 +19,11 @@ export const SubTitle = styled.p`
 export const Text = styled.p`
 
 `;
+
+export const Meta = styled.div`
+
+`;
+
+export const Item = styled.div`
+
+`;
