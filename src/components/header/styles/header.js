@@ -79,14 +79,66 @@ export const ButtonLink = styled(ReactRouterLink)`
     }
 `;
 
+export const Picture = styled.button`
+    background: url(${({ src }) => src});
+    background-size: contain;
+    border: 0;
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+`;
+
+export const Link = styled.p`
+    color: #fff;
+    text-decoration: none;
+    margin-right: 30px;
+    font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+    cursor: pointer;
+
+    &:hover {
+        font-weight: bold;
+    }
+
+    &:last-of-type {
+        margin-right: 0;
+    }
+`;
+
 export const Dropdown = styled.div`
     display: none;
-    background-color: black;
+    background-color: rgba(0, 0, 0, .75);
     position: absolute;
     padding: 10px;
-    width: 100px;
+    min-width: 150px;
     top: 32px;
-    right: 10px;
+    right: -20px;
+
+    ${Link} {
+        cursor: pointer;
+    }
+
+    ${Group} {
+        margin-bottom: 10px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    button {
+        margin-right: 10px;
+    }
+
+    p {
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+`;
+
+export const Break = styled.div`
+    border: 0.5px solid rgba(256, 256, 256, 0.15);
+    margin: 0 -10px;
 `;
 
 export const Profile = styled.div`
@@ -105,15 +157,6 @@ export const Profile = styled.div`
     }
 `;
 
-export const Picture = styled.button`
-    background: url(${({ src }) => src});
-    background-size: contain;
-    border: 0;
-    width: 32px;
-    height: 32px;
-    cursor: pointer;
-`;
-
 export const Text = styled.p`
     color: #fff;
     font-size: 22px;
@@ -129,20 +172,4 @@ export const FeatureCallOut = styled.h2`
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     margin: 0 0 20px;
-`;
-
-export const Link = styled.p`
-    color: #fff;
-    text-decoration: none;
-    margin-right: 30px;
-    font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')}
-    cursor: pointer;
-
-    &:hover {
-        font-weight: bold;
-    }
-
-    &:last-of-type {
-        margin-right: 0;
-    }
 `;

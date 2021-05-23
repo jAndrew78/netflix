@@ -1,7 +1,21 @@
 import React from 'react';
 import { Link as ReactRouterLink } from 'react-router-dom';
 
-import { Background, Container, Group, Feature, Logo, ButtonLink, Picture, Profile, Dropdown, Text, FeatureCallOut, Link } from './styles/header';
+import { 
+    Background, 
+    Container, 
+    Group, 
+    Feature, 
+    Logo, 
+    ButtonLink, 
+    Picture, 
+    Profile, 
+    Dropdown, 
+    Break, 
+    Text, 
+    FeatureCallOut, 
+    Link 
+} from './styles/header';
 
 
 export default function Header({ bg = true, children, ...restProps }) {
@@ -42,6 +56,10 @@ Header.Profile = function HeaderProfile({ children, ...restProps }) {
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
     return <Dropdown {...restProps}>{children}</Dropdown>
+}
+
+Header.Break = function HeaderBreak({ children, ...restProps }) {
+    return <Break {...restProps}>{children}</Break>
 }
 
 Header.Text = function HeaderText({ children, ...restProps }) {

@@ -43,9 +43,10 @@ export function BrowseContainer({ slides }) {
                                     <Header.TextLink>{user.displayName}</Header.TextLink>
                                 </Header.Group>
 
+                                <Header.Break />
                                 <Header.Group>
                                     <Header.TextLink onClick={() => firebase.auth().signOut()}>
-                                        Sign Out
+                                        Sign Out of Netflix
                                     </Header.TextLink>
                                 </Header.Group>
                             </Header.Dropdown>
