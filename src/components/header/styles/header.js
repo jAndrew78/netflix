@@ -106,11 +106,11 @@ export const Link = styled.p`
 
 export const Dropdown = styled.div`
     display: none;
-    background-color: rgba(0, 0, 0, .75);
+    background-color: rgba(0, 0, 0, .9);
     position: absolute;
     padding: 10px;
-    min-width: 150px;
-    top: 32px;
+    min-width: 160px;
+    top: 42px;
     right: -20px;
 
     ${Link} {
@@ -120,7 +120,7 @@ export const Dropdown = styled.div`
     ${Group} {
         margin-bottom: 10px;
 
-        &:last-of-type {
+        &:nth-last-child(-n+3) {
             margin-bottom: 0;
         }
     }
@@ -136,9 +136,23 @@ export const Dropdown = styled.div`
     }
 `;
 
+export const DropdownBreak = styled.div`
+    background-color: rgba(0, 0, 0, 0);
+    position: absolute;
+    width: 35px;
+    height: 10px;
+    top: 32px;
+    right: 0;
+
+    &:hover > ${Dropdown} {
+        display: flex;
+        flex-direction: column;
+    }
+`;
+
 export const Break = styled.div`
     border: 0.5px solid rgba(256, 256, 256, 0.15);
-    margin: 0 -10px;
+    margin: 5px -10px;
 `;
 
 export const Profile = styled.div`

@@ -37,13 +37,32 @@ export function BrowseContainer({ slides }) {
                         <Header.Profile>
                             <Header.Picture src={user.photoURL} />
 
+                            <Header.DropdownBreak />
                             <Header.Dropdown>
                                 <Header.Group>
                                     <Header.Picture src={user.photoURL} />
                                     <Header.TextLink>{user.displayName}</Header.TextLink>
                                 </Header.Group>
 
+                                <Header.Group>
+                                    <Header.TextLink>
+                                        Manage Profiles
+                                    </Header.TextLink>
+                                </Header.Group>
+
                                 <Header.Break />
+                                <Header.Group>
+                                    <Header.TextLink>
+                                        Account
+                                    </Header.TextLink>
+                                </Header.Group>
+
+                                <Header.Group>
+                                    <Header.TextLink>
+                                        Help Center
+                                    </Header.TextLink>
+                                </Header.Group>
+                                
                                 <Header.Group>
                                     <Header.TextLink onClick={() => firebase.auth().signOut()}>
                                         Sign Out of Netflix

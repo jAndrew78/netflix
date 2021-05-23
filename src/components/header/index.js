@@ -10,7 +10,8 @@ import {
     ButtonLink, 
     Picture, 
     Profile, 
-    Dropdown, 
+    Dropdown,
+    DropdownBreak,
     Break, 
     Text, 
     FeatureCallOut, 
@@ -56,6 +57,10 @@ Header.Profile = function HeaderProfile({ children, ...restProps }) {
 
 Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
     return <Dropdown {...restProps}>{children}</Dropdown>
+}
+
+Header.DropdownBreak = function HeaderDropdownBreak({ children, ...restProps }) {
+    return <DropdownBreak {...restProps}>{children}</DropdownBreak>
 }
 
 Header.Break = function HeaderBreak({ children, ...restProps }) {
