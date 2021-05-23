@@ -1,7 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
+
 import { SelectProfileContainer } from './profiles';
 import { FirebaseContext } from '../context/firebase';
 import { Header, Loading } from '../components';
+import * as ROUTES from '../constants/routes';
+import Logo from '../logo.png';
 
 
 export function BrowseContainer({ slides }) {
@@ -22,7 +25,15 @@ export function BrowseContainer({ slides }) {
         <>
             {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
-            <Header src="joker1">
+            <Header src="joker1" dontShowOnSmallViewPort>
+                <Header.Frame>
+                    <Header.Group>
+                        <Header.Logo to={ROUTES.HOME} src={Logo} alt="Netflix" />
+                        <Header.TextLink>Series</Header.TextLink>
+                        <Header.TextLink>Films</Header.TextLink>
+                    </Header.Group>
+                </Header.Frame>
+
                 <Header.Feature>
                     <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
                     <Header.Text>
