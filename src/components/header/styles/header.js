@@ -92,7 +92,7 @@ export const Link = styled.p`
     color: #fff;
     text-decoration: none;
     margin-right: 30px;
-    font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
+    font-weight: ${({ active }) => (active === true ? '700' : 'normal')};
     cursor: pointer;
 
     &:hover {
@@ -192,4 +192,66 @@ export const FeatureCallOut = styled.h2`
     font-weight: bold;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     margin: 0 0 20px;
+`;
+
+export const Search = styled.div`
+    display: flex;
+    align-items: center;
+
+    svg {
+        color: #fff;
+        cursor: pointer;
+    }
+
+    @media (max-width: 700px) {
+        display: none;
+    }
+`;
+
+export const SearchIcon = styled.button`
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    position: ${({ active }) => (active === true ? 'relative' : 'block')};
+    left: ${({ active }) => (active === true ? '40px' : '0')};
+    top: ${({ active }) => (active === true ? '2px' : '0')};
+
+    img {
+        filter: brightness(0) invert(1);
+        width: 16px;
+    }
+`;
+
+export const CloseIcon = styled.button`
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    margin-left: -27px;
+    right: 0;
+
+    opacity: ${({ active }) => (active === true ? '1' : '0')};
+    position: ${({ active }) => (active === true ? 'relative' : 'block')};
+    top: ${({ active }) => (active === true ? '2px' : '0')};
+
+    img {
+        filter: brightness(0) invert(1);
+        width: 14px;
+    }
+
+    &:focus-visible {
+        outline-width: 0;
+    }sadf
+`;
+
+export const SearchInput = styled.input`
+    background-color: rgba(0, 0, 0, .85);
+    color: #fff;
+    border: 1px solid #fff;
+    transition: width 0.5s;
+    height: 30px;
+    font-size: 14px;
+    margin-left: ${({ active }) => (active === true ? '10px' : '0')};
+    padding: ${({ active }) => (active === true ? '0 30px' : '0')};
+    opacity: ${({ active }) => (active === true ? '1' : '0')};
+    width: ${({ active }) => (active === true ? '175px' : '0')};
 `;

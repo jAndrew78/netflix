@@ -8,6 +8,7 @@ import Logo from '../logo.png';
 
 
 export function BrowseContainer({ slides }) {
+    const [searchTerm, setSearchTerm] = useState('');
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
     const { firebase } = useContext(FirebaseContext);
@@ -17,7 +18,7 @@ export function BrowseContainer({ slides }) {
         console.log('profile', profile)
         setTimeout(() => {
             setLoading(false);
-        }, 3000);
+        }, 2000);
     }, [profile, profile.displayName])
 
 
@@ -34,10 +35,17 @@ export function BrowseContainer({ slides }) {
                     </Header.Group>
 
                     <Header.Group>
+
+                        <Header.Search
+                            searchTerm={searchTerm}
+                            setSearchTerm={setSearchTerm}
+                        />
+
                         <Header.Profile>
                             <Header.Picture src={user.photoURL} />
 
                             <Header.DropdownBreak />
+
                             <Header.Dropdown>
                                 <Header.Group>
                                     <Header.Picture src={user.photoURL} />
@@ -51,6 +59,7 @@ export function BrowseContainer({ slides }) {
                                 </Header.Group>
 
                                 <Header.Break />
+
                                 <Header.Group>
                                     <Header.TextLink>
                                         Account
