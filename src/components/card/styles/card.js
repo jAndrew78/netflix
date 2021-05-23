@@ -20,6 +20,34 @@ export const Text = styled.p`
 
 `;
 
+export const Feature = styled.div`
+
+`;
+
+export const FeatureTitle = styled.div`
+
+`;
+
+export const FeatureText = styled.p`
+
+`;
+
+export const FeatureClose = styled.button`
+
+`;
+
+export const Maturity = styled.div`
+
+`;
+
+export const Content = styled.div`
+
+`;
+
+export const Entities = styled.div`
+
+`;
+
 export const Meta = styled.div`
 
 `;
