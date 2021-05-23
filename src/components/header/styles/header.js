@@ -115,6 +115,8 @@ export const Dropdown = styled.div`
 
     ${Link} {
         cursor: pointer;
+        font-size: 13px;
+        font-weight: 700;
     }
 
     ${Group} {
@@ -122,6 +124,10 @@ export const Dropdown = styled.div`
 
         &:nth-last-child(-n+3) {
             margin-bottom: 0;
+        }
+
+        &:hover > ${Link} {
+            text-decoration: underline;
         }
     }
 
