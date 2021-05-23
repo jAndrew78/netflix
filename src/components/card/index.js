@@ -1,5 +1,6 @@
 import React, { useState, useContext, createContext } from 'react';
-import { Container, Group, Title, SubTitle, Text, } from './styles/card';
+import { useContent } from '../../hooks';
+import { Container, Group, Title, SubTitle, Text, Meta, Item, Image } from './styles/card';
 
 
 export const FeatureContext = createContext();
@@ -14,29 +15,42 @@ export default function Card({ children, ...restProps }) {
         >
             <Container {...restProps}>{children}</Container>
         </FeatureContext.Provider>
-    )
+    );
 }
 
 Card.Group = function CardGroup({ children, ...restProps }) {
-    return <Group {...restProps}>{children}</Group>
+    return <Group {...restProps}>{children}</Group>;
 }
 
 Card.Title = function CardTitle({ children, ...restProps }) {
-    return <Title {...restProps}>{children}</Title>
+    return <Title {...restProps}>{children}</Title>;
 }
 
 Card.SubTitle = function CardSubTitle({ children, ...restProps }) {
-    return <SubTitle {...restProps}>{children}</SubTitle>
+    return <SubTitle {...restProps}>{children}</SubTitle>;
 }
 
 Card.Text = function CardText({ children, ...restProps }) {
-    return <Text {...restProps}>{children}</Text>
+    return <Text {...restProps}>{children}</Text>;
 }
 
 Card.Meta = function CardMeta({ children, ...restProps }) {
-    return <Meta {...restProps}>{children}</Meta>
+    return <Meta {...restProps}>{children}</Meta>;
 }
 
 Card.Item = function CardItem({ children, ...restProps }) {
-    return <Item {...restProps}>{children}</Item>
+    const { setShowFeature, setItemFeature } = useContext(FeatureContext);
+
+    return (  
+        <Item 
+            onClick={() => {setItemFeature(item); setShowFeature(true);}}    
+            {...restProps}
+        >
+            {children}
+        </Item>
+    );
+}
+
+Card.Image = function CardImage({ ...restProps }) {
+    return <Image {...restProps} />;
 }

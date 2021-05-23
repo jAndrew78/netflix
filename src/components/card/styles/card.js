@@ -27,3 +27,7 @@ export const Meta = styled.div`
 export const Item = styled.div`
 
 `;
+
+export const Image = styled.img`
+
+`;
