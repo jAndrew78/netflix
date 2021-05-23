@@ -8,18 +8,19 @@ import {
     Feature, 
     Logo, 
     ButtonLink, 
+    Text, 
+    FeatureCallOut, 
+    Link,
     Picture, 
     Profile,
     Dropdown,
     DropdownBreak,
     Break, 
-    Text, 
-    FeatureCallOut, 
-    Link, 
     Search,
     SearchIcon,
     CloseIcon,
     SearchInput,
+    PlayButton,
 } from './styles/header';
 
 
@@ -59,6 +60,30 @@ Header.Profile = function HeaderProfile({ children, ...restProps }) {
     return <Profile {...restProps}>{children}</Profile>
 }
 
+Header.Text = function HeaderText({ children, ...restProps }) {
+    return <Text {...restProps}>{children}</Text>
+}
+
+Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
+    return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>
+}
+
+Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
+    return <Link {...restProps}>{children}</Link>
+}
+
+Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
+    return <Dropdown {...restProps}>{children}</Dropdown>
+}
+
+Header.DropdownBreak = function HeaderDropdownBreak({ children, ...restProps }) {
+    return <DropdownBreak {...restProps}>{children}</DropdownBreak>;
+}
+
+Header.Break = function HeaderBreak({ children, ...restProps }) {
+    return <Break {...restProps}>{children}</Break>;
+}
+
 Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps }) {
     const [searchActive, setSearchActive] = useState(false);
 
@@ -80,27 +105,6 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
     ) 
 }
 
-Header.Dropdown = function HeaderDropdown({ children, ...restProps }) {
-    return <Dropdown {...restProps}>{children}</Dropdown>
+Header.PlayButton = function HeaderPlayButton({ children, ...restProps }) {
+    return <PlayButton {...restProps}>{children}</PlayButton>;
 }
-
-Header.DropdownBreak = function HeaderDropdownBreak({ children, ...restProps }) {
-    return <DropdownBreak {...restProps}>{children}</DropdownBreak>
-}
-
-Header.Break = function HeaderBreak({ children, ...restProps }) {
-    return <Break {...restProps}>{children}</Break>
-}
-
-Header.Text = function HeaderText({ children, ...restProps }) {
-    return <Text {...restProps}>{children}</Text>
-}
-
-Header.FeatureCallOut = function HeaderFeatureCallOut({ children, ...restProps }) {
-    return <FeatureCallOut {...restProps}>{children}</FeatureCallOut>
-}
-
-Header.TextLink = function HeaderTextLink({ children, ...restProps }) {
-    return <Link {...restProps}>{children}</Link>
-}
-

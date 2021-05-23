@@ -255,3 +255,27 @@ export const SearchInput = styled.input`
     opacity: ${({ active }) => (active === true ? '1' : '0')};
     width: ${({ active }) => (active === true ? '175px' : '0')};
 `;
+
+export const PlayButton = styled.button`
+    box-shadow: 0 0.6vw 1vw -0.4vw rgba(0, 0, 0, 0.35);
+    background-color: #fff;
+    color: #000;
+    border-width: 0;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5px;
+    max-width: 130px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+
+    &:hover {
+        background-color: #b6b6b6;
+    }
+
+    span {
+        margin-right: 10px;
+        font-size: 22px;
+    }
+`;

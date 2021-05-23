@@ -86,8 +86,9 @@ export function BrowseContainer({ slides }) {
                 <Header.Feature>
                     <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
                     <Header.Text>
-                        Forever alone in a crowd, failed comedian Arthur Fleck seeks connection as he walks the streets of Gotham City. Arthur wears two masks -- the one he paints for his day job as a clown, and the guise he projects in a futile attempt to feel like he's part of the world around him.
+                        Mentally troubled comedian Aurthur Fleck, disregarded by society, embarks on a downward spiral which eventually brings him face to face with his alter ego: the Joker.
                     </Header.Text>
+                    <Header.PlayButton><span>&#9654; </span>Play</Header.PlayButton>
                 </Header.Feature>
             </Header>
         </>
