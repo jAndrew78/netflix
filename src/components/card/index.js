@@ -54,25 +54,29 @@ Card.Feature = function CardFeature({ category, children, ...restProps }) {
     
     return showFeature ? (
         <Feature 
+            {...restProps}
             src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
         >
             <Content>
                 <FeatureTitle>{itemFeature.title}</FeatureTitle>
-                <FeatureText>{itemFeature.text}</FeatureText>
+                <FeatureText>{itemFeature.description}</FeatureText>
                 <FeatureClose onClick={() => setShowFeature(false)}>
                     <img src="/images/icons/close.png" alt="Close" />
                 </FeatureClose>
             </Content>
+
+            <Group margin="30px 0" flexDirection="row" alignItems="center">
+                <Maturity rating={itemFeature.maturity}>
+                    {itemFeature.maturity < 12 ? 'PG' : itemFeature.maturity}
+                </Maturity>
+
+                <FeatureText fontweight="bold">
+                    {itemFeature.genre.charAt(0).toUpperCase() +
+                        itemFeature.genre.slice(1)}
+                </FeatureText>
+            </Group>
         </Feature>
     ) : null;
-}
-
-Card.Maturity = function CardMaturity({ children, ...restProps }) {
-    return <Maturity {...restProps}>{children}</Maturity>;
-}
-
-Card.Content = function CardContent({ children, ...restProps }) {
-    return <Content {...restProps}>{children}</Content>;
 }
 
 Card.Entities = function CardEntities({ children, ...restProps }) {
