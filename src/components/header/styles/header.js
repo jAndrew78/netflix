@@ -41,6 +41,8 @@ export const Background = styled.div`
     background: url(${({ src }) => 
         src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
         top left / cover no-repeat;
+    
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
     @media (max-width: 1100px) {
         ${({ dontShowOnSmallViewPort }) =>
@@ -92,14 +94,14 @@ export const Link = styled.p`
     color: #fff;
     text-decoration: none;
     margin-left: 80px;
-    margin-right: 15px;
+    margin-right: 25px;
     font-size: 14px;
     font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
     cursor: pointer;
     transition: color .5s ease;
 
     &:hover {
-        color: #b6b6b6;
+        color: ${({ active }) => (active === 'false' ? '#b6b6b6' : '#fff')};
     }
 
     &:last-of-type {

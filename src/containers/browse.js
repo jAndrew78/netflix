@@ -56,14 +56,14 @@ export function BrowseContainer({ slides }) {
                             active={category === 'series' ? 'true' : 'false'}
                             onClick={() => setCategory('series')}
                         >
-                            Series
+                            TV Shows
                         </Header.TextLink>
 
                         <Header.TextLink
                             active={category === 'films' ? 'true' : 'false'}
                             onClick={() => setCategory('films')}
                         >
-                            Films
+                            Movies
                         </Header.TextLink>
                     </Header.Group>
 

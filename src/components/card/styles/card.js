@@ -77,6 +77,8 @@ export const Feature = styled.div`
     background-size: contain;
     position: relative;
     height: 360px;
+    margin-right: 57px;
+    margin-top: 30px;
     background-position-x: right;
     background-repeat: no-repeat;
     background-color: black;
