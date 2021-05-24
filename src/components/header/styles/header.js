@@ -91,16 +91,24 @@ export const Picture = styled.button`
 export const Link = styled.p`
     color: #fff;
     text-decoration: none;
-    margin-right: 30px;
+    margin-left: 80px;
+    margin-right: 15px;
+    font-size: 14px;
     font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
     cursor: pointer;
+    transition: color .5s ease;
 
     &:hover {
-        font-weight: bold;
+        color: #b6b6b6;
     }
 
     &:last-of-type {
         margin-right: 0;
+        margin-left: 0;
+    }
+
+    @media (max-width: 1100px) {
+        margin-left: 0;
     }
 `;
 
@@ -112,6 +120,7 @@ export const Dropdown = styled.div`
     min-width: 160px;
     top: 42px;
     right: -20px;
+    z-index: 100;
 
     ${Link} {
         cursor: pointer;
