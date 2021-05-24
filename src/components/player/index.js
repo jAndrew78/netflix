@@ -36,7 +36,10 @@ Player.Button = function PlayerButton({ ...restProps }) {
     const { showPlayer, setShowPlayer } = useContext(PlayerContext);
 
     return (
-        <Button onClick={() => setShowPlayer(showPlayer => !showPlayer)}>
+        <Button 
+            onClick={() => setShowPlayer(showPlayer => !showPlayer)}>
+            {/* use below to remove showPlayer error above, but may cause an error in rare cases */}
+            {/* onClick={() => setShowPlayer(!showPlayer)}> */}
             <span>&#9654; </span>
             Play
         </Button>
