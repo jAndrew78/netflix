@@ -49,20 +49,22 @@ Card.Text = function CardText({ children, ...restProps }) {
     return <Text {...restProps}>{children}</Text>;
 }
 
-Card.Feature = function CardFeature({ children, ...restProps }) {
-    return <Feature {...restProps}>{children}</Feature>;
-}
-
-Card.FeatureTitle = function CardFeatureTitle({ children, ...restProps }) {
-    return <FeatureTitle {...restProps}>{children}</FeatureTitle>;
-}
-
-Card.FeatureText = function CardFeatureText({ children, ...restProps }) {
-    return <FeatureText {...restProps}>{children}</FeatureText>;
-}
-
-Card.FeatureClose = function CardFeatureClose({ children, ...restProps }) {
-    return <FeatureClose {...restProps}>{children}</FeatureClose>;
+Card.Feature = function CardFeature({ category, children, ...restProps }) {
+    const { showFeature, itemFeature, setShowFeature } = useContext(FeatureContext);
+    
+    return showFeature ? (
+        <Feature 
+            src={`/images/${category}/${itemFeature.genre}/${itemFeature.slug}/large.jpg`}
+        >
+            <Content>
+                <FeatureTitle>{itemFeature.title}</FeatureTitle>
+                <FeatureText>{itemFeature.text}</FeatureText>
+                <FeatureClose onClick={() => setShowFeature(false)}>
+                    <img src="/images/icons/close.png" alt="Close" />
+                </FeatureClose>
+            </Content>
+        </Feature>
+    ) : null;
 }
 
 Card.Maturity = function CardMaturity({ children, ...restProps }) {
