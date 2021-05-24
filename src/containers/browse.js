@@ -2,15 +2,17 @@ import React, { useContext, useState, useEffect } from 'react';
 
 import { SelectProfileContainer } from './profiles';
 import { FirebaseContext } from '../context/firebase';
-import { Header, Loading } from '../components';
+import { Header, Loading, Card } from '../components';
 import * as ROUTES from '../constants/routes';
 import Logo from '../logo.png';
 
 
 export function BrowseContainer({ slides }) {
+    const [category, setCategory] = useState('series')
     const [searchTerm, setSearchTerm] = useState('');
     const [profile, setProfile] = useState({});
     const [loading, setLoading] = useState(true);
+    const [slideRows, setSlideRows] = useState([]);
     const { firebase } = useContext(FirebaseContext);
     const user = firebase.auth().currentUser || {};
 
@@ -21,6 +23,9 @@ export function BrowseContainer({ slides }) {
         }, 2000);
     }, [profile, profile.displayName])
 
+    useEffect(() => {
+        setSlideRows(slides[category]);
+    }, [slides, category])
 
     return profile.displayName ? (
         <>
@@ -30,8 +35,20 @@ export function BrowseContainer({ slides }) {
                 <Header.Frame>
                     <Header.Group>
                         <Header.Logo to={ROUTES.HOME} src={Logo} alt="Netflix" />
-                        <Header.TextLink>Series</Header.TextLink>
-                        <Header.TextLink>Films</Header.TextLink>
+
+                        <Header.TextLink
+                            active={category === 'series' ? 'true' : 'false'}
+                            onClick={() => setCategory('series')}
+                        >
+                            Series
+                        </Header.TextLink>
+                        
+                        <Header.TextLink
+                            active={category === 'films' ? 'true' : 'false'}
+                            onClick={() => setCategory('films')}
+                        >
+                            Films
+                        </Header.TextLink>
                     </Header.Group>
 
                     <Header.Group>
@@ -91,6 +108,10 @@ export function BrowseContainer({ slides }) {
                     <Header.PlayButton><span>&#9654; </span>Play</Header.PlayButton>
                 </Header.Feature>
             </Header>
+
+            <Card.Group>
+
+            </Card.Group>
         </>
     ) : (
         <SelectProfileContainer user={user} setProfile={setProfile} />

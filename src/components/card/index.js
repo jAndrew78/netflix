@@ -1,5 +1,4 @@
 import React, { useState, useContext, createContext } from 'react';
-import { useContent } from '../../hooks';
 import { 
     Container, 
     Group, 
@@ -82,7 +81,7 @@ Card.Meta = function CardMeta({ children, ...restProps }) {
     return <Meta {...restProps}>{children}</Meta>;
 }
 
-Card.Item = function CardItem({ children, ...restProps }) {
+Card.Item = function CardItem({ item, children, ...restProps }) {
     const { setShowFeature, setItemFeature } = useContext(FeatureContext);
 
     return (  
