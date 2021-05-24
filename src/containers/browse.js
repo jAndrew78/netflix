@@ -47,7 +47,7 @@ export function BrowseContainer({ slides }) {
         <>
             {loading ? <Loading src={user.photoURL} /> : <Loading.ReleaseBody />}
 
-            <Header src="joker1" dontShowOnSmallViewPort>
+            <Header src="joker2" dontShowOnSmallViewPort>
                 <Header.Frame>
                     <Header.Group>
                         <Header.Logo to={ROUTES.HOME} src={Logo} alt="Netflix" />
@@ -113,13 +113,14 @@ export function BrowseContainer({ slides }) {
                             </Header.Dropdown>
 
                         </Header.Profile>
+
                     </Header.Group>
                 </Header.Frame>
 
                 <Header.Feature>
                     <Header.FeatureCallOut>Watch Joker Now</Header.FeatureCallOut>
                     <Header.Text>
-                        Mentally troubled comedian Aurthur Fleck, disregarded by society, embarks on a downward spiral which eventually brings him face to face with his alter ego: the Joker.
+                        Troubled comedian Aurthur Fleck embarks on a downward spiral which brings him face to face with his alter ego: the Joker.
                     </Header.Text>
                     <Header.PlayButton><span>&#9654; </span>Play</Header.PlayButton>
                 </Header.Feature>

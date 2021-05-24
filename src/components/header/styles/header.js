@@ -25,7 +25,7 @@ export const Group = styled.div`
 `;
 
 export const Feature = styled(Container)`
-    padding: 150px 0 500px;
+    padding: 80px 0 500px;
     flex-direction: column;
     align-items: normal;
     width: 50%;
@@ -34,6 +34,14 @@ export const Feature = styled(Container)`
         display: none;
     }
 `
+export const FeatureCallOut = styled.h2`
+    color: #fff;
+    font-size: 50px;
+    line-height: normal;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
+    margin: 0 0 20px;
+`;
 
 export const Background = styled.div`
     display: flex;
@@ -52,6 +60,7 @@ export const Background = styled.div`
 export const Logo = styled.img`
     height: 32px;
     width: 108px;
+    margin-left: -20px;
     margin-right: 40px;
 
     @media (min-width: 1449px) {
@@ -92,7 +101,7 @@ export const Picture = styled.button`
 export const Link = styled.p`
     color: #fff;
     text-decoration: none;
-    margin-left: 80px;
+    margin-left: 90px;
     margin-right: 25px;
     font-size: 14px;
     font-weight: ${({ active }) => (active === 'true' ? '700' : 'normal')};
@@ -193,15 +202,7 @@ export const Text = styled.p`
     line-height: normal;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
     margin: 0;
-`;
-
-export const FeatureCallOut = styled.h2`
-    color: #fff;
-    font-size: 50px;
-    line-height: normal;
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.45);
-    margin: 0 0 20px;
+    width: 500px;
 `;
 
 export const Search = styled.div`

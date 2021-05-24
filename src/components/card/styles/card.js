@@ -34,7 +34,7 @@ export const Group = styled.div`
 
     >${Container}:first-of-type {
         @media (min-width: 1101px) {
-            margin-top: -150px;
+            margin-top: -200px;
         }
     }
 `;
@@ -109,8 +109,13 @@ export const FeatureClose = styled.button`
     right: 20px;
     top: 20px;
     cursor: pointer;
+    opacity: .75;
     background-color: transparent;
     border: 0;
+
+    &:hover {
+        opacity: 1;
+    }
 
     img {
         filter: brightness(0) invert(1);

@@ -64,6 +64,7 @@ Card.Feature = function CardFeature({ category, children, ...restProps }) {
                     <img src="/images/icons/close.png" alt="Close" />
                 </FeatureClose>
 
+                {/* NORMALLY WOULDN'T PASS STYLING AS PROPS, JUST WANTED TO SEE HOW IT WAS DONE */}
                 <Group margin="30px 0" flexDirection="row" alignItems="center">
                     <Maturity rating={itemFeature.maturity}>
                         {itemFeature.maturity < 12 ? 'PG' : "MA-" + itemFeature.maturity}
@@ -93,7 +94,7 @@ Card.Item = function CardItem({ item, children, ...restProps }) {
 
     return (  
         <Item 
-            onClick={() => {setItemFeature(item); setShowFeature(true);}}    
+            onClick={() => {setItemFeature(item); setShowFeature(showFeature => !showFeature);}}    
             {...restProps}
         >
             {children}
