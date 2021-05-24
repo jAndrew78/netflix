@@ -38,11 +38,10 @@ export const Feature = styled(Container)`
 export const Background = styled.div`
     display: flex;
     flex-direction: column;
+    // mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
     background: url(${({ src }) => 
         src ? `../images/misc/${src}.jpg` : '../images/misc/home-bg.jpg'})
         top left / cover no-repeat;
-    
-    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
 
     @media (max-width: 1100px) {
         ${({ dontShowOnSmallViewPort }) =>
@@ -67,7 +66,7 @@ export const ButtonLink = styled(ReactRouterLink)`
     background-color: #e50914;
     width: 84px;
     height: fit-content;
-    color: white;
+    color: #fff;
     border: 0;
     font-size: 15px;
     border-radius: 3px;
@@ -231,6 +230,10 @@ export const SearchIcon = styled.button`
         filter: brightness(0) invert(1);
         width: 16px;
     }
+
+    &:focus-visible {
+        outline-width: 0;
+    }
 `;
 
 export const CloseIcon = styled.button`
@@ -251,7 +254,7 @@ export const CloseIcon = styled.button`
 
     &:focus-visible {
         outline-width: 0;
-    }sadf
+    }
 `;
 
 export const SearchInput = styled.input`
@@ -272,9 +275,9 @@ export const PlayButton = styled.button`
     background-color: #fff;
     color: #000;
     border-width: 0;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 5px;
     border-radius: 5px;
-    max-width: 130px;
+    max-width: 120px;
     font-size: 20px;
     font-weight: bold;
     margin-top: 30px;
