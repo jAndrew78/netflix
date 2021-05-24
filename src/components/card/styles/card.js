@@ -40,23 +40,58 @@ export const Group = styled.div`
 `;
 
 export const SubTitle = styled.p`
-
+    display: none;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 0;
+    user-select: none;
 `;
 
 export const Text = styled.p`
+    margin-top: 5px;
+    font-size: 10px;
+    color: #fff;
+    margin-bottom: 0;
+    user-select: none;
+    display: none;
+    line-height: normal;
+`;
 
+export const FeatureText = styled.p`
+    margin: 0;
 `;
 
 export const Feature = styled.div`
+    display: flex;
+    flex-direction: row;
+    background: url(${({ src }) => src});
+    background-size: contain;
+    position: relative;
+    height: 360px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-color: black;
 
+    @media (max-width: 1000px) {
+        height: auto;
+        background-size: auto;
+        
+        $(Title) {
+            font-size: 20px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        $(FeatureText) {
+            font-size: 14px;
+        }
+    }
 `;
 
 export const FeatureTitle = styled(Title)`
     margin-left: 0;
-`;
-
-export const FeatureText = styled.p`
-
 `;
 
 export const FeatureClose = styled.button`
@@ -68,10 +103,10 @@ export const FeatureClose = styled.button`
     background-color: transparent;
     border: 0;
 
-    img (
+    img {
         filter: brightness(0) invert(1);
         width: 24px;
-    )
+    }
 `;
 
 export const Maturity = styled.div`
