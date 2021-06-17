@@ -1,0 +1,220 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> renders the basic <Header /> with a background 1`] = `
+<div
+  class="header__Background-djltcn-4 bHQNpi"
+  data-testid="header-bg"
+>
+  <div
+    class="header__Container-djltcn-0 bHyAQr"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="Netflix"
+        class="header__Logo-djltcn-5 iXegay"
+        src="/logo.svg"
+      />
+    </a>
+    <p
+      class="header__Link-djltcn-8 fydlpe"
+      to="/"
+    >
+      Hello I am a link!
+    </p>
+  </div>
+</div>
+`;
+
+exports[`<Header /> renders the basic <Header /> without a background 1`] = `
+<div
+  class="header__Container-djltcn-0 bHyAQr"
+>
+  <a
+    href="/"
+  >
+    <img
+      alt="Netflix"
+      class="header__Logo-djltcn-5 iXegay"
+      src="/logo.svg"
+    />
+  </a>
+  <a
+    class="header__ButtonLink-djltcn-6 cQKhOl"
+    href="/"
+  >
+    Sign In
+  </a>
+  <p
+    class="header__Link-djltcn-8 kHLvHs"
+    to="/"
+  >
+    Hello I am a link!
+  </p>
+</div>
+`;
+
+exports[`<Header /> renders the full <Header /> with a background 1`] = `
+<div
+  class="header__Background-djltcn-4 ixUnOD"
+  data-testid="header-bg"
+  src="joker2"
+>
+  <div
+    class="header__Container-djltcn-0 bHyAQr"
+  >
+    <div
+      class="header__Group-djltcn-1 glnGbv"
+    >
+      <a
+        href="/"
+      >
+        <img
+          alt="Netflix"
+          class="header__Logo-djltcn-5 iXegay"
+          src="/images/logo.svg"
+        />
+      </a>
+      <p
+        class="header__Link-djltcn-8 czjQWe"
+        to="/"
+      >
+        TV Shows
+      </p>
+      <p
+        class="header__Link-djltcn-8 czjQWe"
+        to="/"
+      >
+        Movies
+      </p>
+    </div>
+    <div
+      class="header__Group-djltcn-1 glnGbv"
+    >
+      <div
+        class="header__Search-djltcn-14 dtnxmj"
+      >
+        <button
+          class="header__SearchIcon-djltcn-15 brdaVb"
+          data-testid="search-click"
+        >
+          <img
+            alt="Search"
+            src="/images/icons/search.png"
+          />
+        </button>
+        <input
+          class="header__SearchInput-djltcn-17 kmVBpR"
+          data-testid="search-input"
+          placeholder="Search films and series"
+          value="Joker"
+        />
+        <button
+          class="header__CloseIcon-djltcn-16 gAhmDQ"
+          data-testid="search-close"
+        >
+          <img
+            alt="Close"
+            src="/images/icons/close-slim.png"
+          />
+        </button>
+      </div>
+      <div
+        class="header__Profile-djltcn-12 WiGLP"
+      >
+        <button
+          class="header__Picture-djltcn-7 epwiFt"
+          src="/images/users//images/andrew.png.png"
+        />
+        <div
+          class="header__DropdownBreak-djltcn-10 hjYeSy"
+        />
+        <div
+          class="header__Dropdown-djltcn-9 keHjTV"
+        >
+          <div
+            class="header__Group-djltcn-1 glnGbv"
+          >
+            <button
+              class="header__Picture-djltcn-7 epwiFt"
+              src="/images/users//images/andrew.png.png"
+            />
+            <p
+              class="header__Link-djltcn-8 czjQWe"
+              to="/"
+            >
+              Andrew
+            </p>
+          </div>
+          <div
+            class="header__Group-djltcn-1 glnGbv"
+          >
+            <p
+              class="header__Link-djltcn-8 czjQWe"
+              to="/"
+            >
+              Manage Profiles
+            </p>
+          </div>
+          <div
+            class="header__Break-djltcn-11 dcYWEf"
+          />
+          <div
+            class="header__Group-djltcn-1 glnGbv"
+          >
+            <p
+              class="header__Link-djltcn-8 czjQWe"
+              to="/"
+            >
+              Account
+            </p>
+          </div>
+          <div
+            class="header__Group-djltcn-1 glnGbv"
+          >
+            <p
+              class="header__Link-djltcn-8 czjQWe"
+              to="/"
+            >
+              Help Center
+            </p>
+          </div>
+          <div
+            class="header__Group-djltcn-1 glnGbv"
+          >
+            <p
+              class="header__Link-djltcn-8 czjQWe"
+              to="/"
+            >
+              Sign Out of Netflix
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="header__Container-djltcn-0 header__Feature-djltcn-2 bHyAQr kdETnK"
+  >
+    <h2
+      class="header__FeatureCallOut-djltcn-3 jLwNcK"
+    >
+      Watch Joker Now
+    </h2>
+    <p
+      class="header__Text-djltcn-13 kHftXZ"
+    >
+      Troubled comedian Aurthur Fleck...
+    </p>
+    <button
+      class="header__PlayButton-djltcn-18 dqwxtr"
+    >
+      <span>
+        ▶ 
+      </span>
+      Play
+    </button>
+  </div>
+</div>
+`;

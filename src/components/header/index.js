@@ -25,7 +25,13 @@ import {
 
 
 export default function Header({ bg = true, children, ...restProps }) {
-    return bg ? <Background {...restProps}>{children}</Background> : children;
+    return bg ? (
+        <Background {...restProps} data-testid="header-bg">
+            {children}
+        </Background> 
+    ) : (
+        children
+    );
 }
 
 Header.Frame = function HeaderFrame({ children, ...restProps }) {
@@ -89,7 +95,11 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
 
     return (
         <Search {...restProps}>
-            <SearchIcon onClick={() => setSearchActive(searchActive => !searchActive)} active={searchActive}>
+            <SearchIcon 
+                onClick={() => setSearchActive(searchActive => !searchActive)} 
+                active={searchActive}
+                data-testid="search-click"
+            >
                 <img src="/images/icons/search.png" alt="Search" />
             </SearchIcon>
             <SearchInput
@@ -97,8 +107,13 @@ Header.Search = function HeaderSearch({ searchTerm, setSearchTerm, ...restProps 
                 onChange={({ target }) => setSearchTerm(target.value)}
                 placeholder="Search films and series"
                 active={searchActive}
+                data-testid="search-input"
             />
-            <CloseIcon onClick={() => setSearchActive(searchActive => !searchActive)} active={searchActive}>
+            <CloseIcon 
+                onClick={() => setSearchActive(searchActive => !searchActive)} 
+                active={searchActive}
+                data-testid="search-close"
+            >
                 <img src="/images/icons/close-slim.png" alt="Close" />
             </CloseIcon>
         </Search>
