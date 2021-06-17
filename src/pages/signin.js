@@ -8,7 +8,7 @@ import { Form } from '../components';
 import * as ROUTES from '../constants/routes';
 
 
-export default function Signin() {
+export default function SignIn() {
     const { firebase } = useContext(FirebaseContext);
     const history = useHistory();
 
