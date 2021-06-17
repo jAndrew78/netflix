@@ -13,5 +13,4 @@ test('renders the homepage', () => {
     expect(getByText('Watch anywhere. Cancel anytime.')).toBeTruthy();
     expect(getAllByText('Ready to watch? Enter your email to create or restart your membership.')).toBeTruthy();
     expect(getAllByPlaceholderText('Email address')).toBeTruthy();
-
 });
